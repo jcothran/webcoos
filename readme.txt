@@ -31,3 +31,12 @@ thumb2txt.py - batch(or not depending on system/performance) process image files
 
 txt2db.py - use filename to carry forward camera id and datetime with summary detection info in csv files
 
+######################################
+RTSP processing
+
+beach/rtsp_fetched
+
+get_northlinet_every5min.py - use ffmpeg to get a RTSP feed image sample at time interval(5 minutes)
+  this could be changed to loop through multiple RTSP sources
+
+ts_filename.py - creates cam id, timestamp and 'thumb' suffix for later file processing
