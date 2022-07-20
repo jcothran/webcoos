@@ -31,13 +31,13 @@ where the text file output is saved under an additional exp/labels folder
 The file line format is
 object class id,confidence,x,y,width,height 
 
-coco class id, subtract 1 from the reference number listed at,e.g. 0 = person, http://gist.github.com/AruniRC/7b3dadd004da04c80198557db5da4bdaeach/results
+coco class id, subtract 1 from the reference number listed at the below link,e.g. 0 = person, http://gist.github.com/AruniRC/7b3dadd004da04c80198557db5da4bdaeach/results
 
     0 = person
     25 = umbrella
     56 = chair
 
-detect.py is currently run with '--class 0 25 56' option flag as a [nms](https://learnopencv.com/non-maximum-suppression-theory-and-implementation-in-pytorch/) filter for only detecting these 'beach' classes of interest, this class id list can be changed as needed
+detect.py can be run with '--class 0 25 56' option flag as a [nms](https://learnopencv.com/non-maximum-suppression-theory-and-implementation-in-pytorch/) filter for only detecting these 'beach' classes of interest, not sure of the increase in performance or accuracy of detections
 
 In my processing, I prefix these lines with the camera id and datetime for the image like below with coco object class id's at the below link
 
