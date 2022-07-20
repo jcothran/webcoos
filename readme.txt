@@ -1,3 +1,16 @@
+######################################
+Server install
+ 
+apt-get update
+apt-get upgrade
+
+pip install wget
+
+apt-get install ffmpeg
+
+######################################
+Video clip processing
+
 Each of the below scripts can be run independently as continuously running scripts. They reference and pass processed files between the below folders.
 
 #fetch_clips.py
@@ -19,8 +32,7 @@ beach/results
 beach/results/empty
 
 
-######################################
-
+####
 fetch_clips.py - retrieve video clips
   this currently uses wget, assuming the video clip is pulled from another site, change as needed for system internal file references
 
