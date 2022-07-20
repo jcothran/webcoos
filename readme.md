@@ -1,3 +1,8 @@
+[Docker setup](https://github.com/jcothran/webcoos/blob/main/docker_setup.md)
+
+Additional notes
+[Confidence level testing](https://github.com/jcothran/webcoos/blob/main/detection_confidence_testing.md)
+
 ---
 Server install
  
@@ -52,3 +57,5 @@ get_northlinet_every5min.py - use ffmpeg to get a RTSP feed image sample at time
   this could be changed to loop through multiple RTSP sources
 
 ts_filename.py - creates cam id, timestamp and 'thumb' suffix for later file processing
+
+
