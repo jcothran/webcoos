@@ -13,12 +13,12 @@ Video clip processing
 
 Each of the below scripts can be run independently as continuously running scripts. They reference and pass processed files between the below folders.
 
-#fetch_clips.py 
+#fetch_clips.py<br/>
 beach/video_fetched
 
-#process_clips.py 
-beach/video_fetched
-beach/thumbs
+#process_clips.py<br/>
+beach/video_fetched<br/>
+beach/thumbs<br/>
 
 #thumb2txts.py 
 beach/thumbs 
