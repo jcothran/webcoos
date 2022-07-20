@@ -1,4 +1,4 @@
-######################################
+---
 Server install
  
 apt-get update
@@ -8,7 +8,7 @@ pip install wget
 
 apt-get install ffmpeg
 
-######################################
+---
 Video clip processing
 
 Each of the below scripts can be run independently as continuously running scripts. They reference and pass processed files between the below folders.
@@ -43,7 +43,7 @@ thumb2txt.py - batch(or not depending on system/performance) process image files
 
 txt2db.py - use filename to carry forward camera id and datetime with summary detection info in csv files
 
-######################################
+---
 RTSP processing
 
 beach/rtsp_fetched
