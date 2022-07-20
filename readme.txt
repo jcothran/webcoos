@@ -4,11 +4,14 @@ Each of the below scripts can be run independently as continuously running scrip
 beach/video_fetched
 
 #process_clips.py
+beach/video_fetched
 beach/thumbs
 
-#process_clips.py
+#thumb2txts.py
+beach/thumbs
 beach/thumbs/buf
 beach/thumbs/done
+runs/detect/exp/labels
 
 #txt2db.py
 runs/detect/exp/labels
