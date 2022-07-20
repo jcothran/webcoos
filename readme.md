@@ -1,6 +1,6 @@
 [Docker setup](https://github.com/jcothran/webcoos/blob/main/docker_setup.md)
 
-Additional notes
+Additional notes<br/>
 [Confidence level testing](https://github.com/jcothran/webcoos/blob/main/detection_confidence_testing.md)
 
 ---
