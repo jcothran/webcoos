@@ -1,7 +1,7 @@
 ---
 Server install
  
-apt-get update 
+apt-get update<br/>
 apt-get upgrade
 
 pip install wget
