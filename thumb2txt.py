@@ -39,7 +39,9 @@ while True:
       cntFile = 0 
 
       #do object detection
-      cmd_str = 'python /usr/src/app/detect.py --source /usr/src/app/beach/thumbs/buf --save-txt --save-conf --nosave --exist-ok'
+      #note '--conf_thres=0.01, default is 0.25, but lowering this to 0.01 increases detections without too many false positives in testing
+      #note '--class 0 25 56', (0=person,25=umbrella,56=chair), default is to run without class filter or class list can be changed depending on scene or interest
+      cmd_str = 'python /usr/src/app/detect.py --source /usr/src/app/beach/thumbs/buf --conf_thres=0.01 --class 0 25 56 --save-txt --save-conf --nosave --exist-ok'
 
       proc = Popen([cmd_str], stdout=PIPE, shell=True)
       for line in iter(proc.stdout.readline, b''):
