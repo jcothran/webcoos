@@ -12,7 +12,7 @@ INSERT INTO (dataset_id,m_date,m_type,m_tag,m_value) ts_obs VALUES ('northinlet'
 #rain gauge - measurement_type(m_type) suffixed with unit of measure
 INSERT INTO (dataset_id,m_date,m_type,m_tag,m_value) ts_obs VALUES ('rosemontpeonie','2022-09-29T13:00:00Z','rain:inches',NULL,0.11)
 
-#distance guage - measurement_type(m_type) suffixed with unit of measure
+#distance gauge - measurement_type(m_type) suffixed with unit of measure
 INSERT INTO (dataset_id,m_date,m_type,m_tag,m_value) ts_obs VALUES ('rosemontpeonie','2022-09-29T13:00:00Z','distance:cm',NULL,275.2)
 
 
