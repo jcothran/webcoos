@@ -1,0 +1,67 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>WebCOOS Synch Dashboard</title>
+        <style>
+            body { font-family: sans-serif; text-align: center; background: #121212; color: white; margin: 0; padding: 20px; }
+            #viewer-container { max-width: 1200px; margin: 0 auto; }
+            img#frame-display { width: 100%; height: auto; border: 2px solid #333; border-radius: 8px; }
+            .controls { margin-top: 20px; display: flex; align-items: center; justify-content: center; gap: 15px; }
+            input[type=range] { width: 60%; cursor: pointer; }
+            button { padding: 10px 20px; font-size: 16px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 5px; }
+            button:hover { background: #0056b3; }
+        </style>
+    </head>
+    <body>
+        <div id="viewer-container">
+            <h2>8518750 Timeline Dashboard</h2>
+            <img id="frame-display" src="frames/frame_0004.jpg" alt="Synchronized Frame">
+            <div class="controls">
+                <button id="playBtn">Play</button>
+                <button id="pauseBtn">Pause</button>
+                <input type="range" id="slider" min="0" max="37" value="0">
+                <span id="frameCounter">1 / 38</span>
+            </div>
+        </div>
+
+        <script>
+            const frames = ["frames/frame_0004.jpg", "frames/frame_0009.jpg", "frames/frame_0014.jpg", "frames/frame_0019.jpg", "frames/frame_0024.jpg", "frames/frame_0029.jpg", "frames/frame_0034.jpg", "frames/frame_0039.jpg", "frames/frame_0044.jpg", "frames/frame_0049.jpg", "frames/frame_0054.jpg", "frames/frame_0059.jpg", "frames/frame_0064.jpg", "frames/frame_0069.jpg", "frames/frame_0074.jpg", "frames/frame_0079.jpg", "frames/frame_0084.jpg", "frames/frame_0089.jpg", "frames/frame_0094.jpg", "frames/frame_0099.jpg", "frames/frame_0104.jpg", "frames/frame_0109.jpg", "frames/frame_0114.jpg", "frames/frame_0119.jpg", "frames/frame_0124.jpg", "frames/frame_0129.jpg", "frames/frame_0134.jpg", "frames/frame_0139.jpg", "frames/frame_0144.jpg", "frames/frame_0149.jpg", "frames/frame_0154.jpg", "frames/frame_0159.jpg", "frames/frame_0164.jpg", "frames/frame_0169.jpg", "frames/frame_0174.jpg", "frames/frame_0179.jpg", "frames/frame_0184.jpg", "frames/frame_0189.jpg"];
+            const img = document.getElementById('frame-display');
+            const slider = document.getElementById('slider');
+            const counter = document.getElementById('frameCounter');
+            let playing = false;
+            let timer;
+
+            function updateFrame(idx) {
+                img.src = frames[idx];
+                slider.value = idx;
+                counter.innerText = (parseInt(idx) + 1) + " / " + frames.length;
+            }
+
+            slider.addEventListener('input', (e) => {
+                if (playing) {
+                    playing = false;
+                    clearInterval(timer);
+                }
+                updateFrame(e.target.value);
+            });
+
+            document.getElementById('playBtn').addEventListener('click', () => {
+                if (playing) return;
+                playing = true;
+                timer = setInterval(() => {
+                    let idx = parseInt(slider.value) + 1;
+                    if (idx >= frames.length) idx = 0;
+                    updateFrame(idx);
+                }, 200);
+            });
+
+            document.getElementById('pauseBtn').addEventListener('click', () => {
+                playing = false;
+                clearInterval(timer);
+            });
+        </script>
+    </body>
+    </html>
+    
