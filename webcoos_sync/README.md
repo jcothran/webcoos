@@ -17,5 +17,5 @@ To install, go through the installation listed for the earlier [NWLON_WebCOOS_Sy
 After this, swap in the files here (main.py, CoopsApi.py, API.py) in their respective project folders/places and then should be able to run test1.py successfully to produce the movie below with a single NWLON graph. From there you can try adding the example CSV files and rerunning test1.py to show those additional graphs or CSV graphs of your own choosing. Note the CSV files should be formatted to follow the same datetime fomatting convention and header as the first column and second column header name will provide the y-axis label. The csv filename will be listed in the graph legend. CSV datetime range should be about the same range as the start_time, end_time parameter. Currently the script may take a long time to run with downloading 20 images taking about 1 minute per image or 20 minutes total.
 
 [Watch the webcoos_sync movie](https://drive.google.com/file/d/1pZwJPMehr7tgfj7xClWgO5HHUo5MKGOl/view?usp=sharing)<br/>
-!(./media/webcoos_sync.jpg)
+![image](./media/webcoos_sync.jpg)
 
